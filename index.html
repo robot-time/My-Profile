@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miles Hedrick</title>
+</head>
+<style>
+   
+    @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+    body{
+        background:
+        conic-gradient(from 90deg at 1px 1px,#0000 90deg,rgb(0, 0, 0) 0) 
+        0 0/50px 50px;
+        background-color: aliceblue;
+        font-family: "Tilt Warp", sans-serif;
+    }
+    p {
+        font-family: "Tilt Warp", sans-serif;
+    }
+    .countdown{
+        font-family: "Tilt Warp", sans-serif;
+        font-size: 35px;
+    }
+    h1{
+        font-family: "climate crisis", sans-serif;
+    }
+    .box{
+        background-color: #2ecc71;
+        width: 500px;
+        height: 500px;
+        box-shadow: 10px 10px 5px rgb(0, 0, 0);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -300px 0 0 -300px;
+    }
+
+    span::before {
+            content: "Phone otimization";
+            animation: animate infinite 6s;
+            padding-left: 10px;
+        }
+  
+        @keyframes animate {
+  
+            0% {
+                content: "Phone otimization";
+            }
+  
+            50% {
+                content: "Colour palette";
+            }
+  
+            75% {
+                content: "<div>'s";
+            }
+        }
+@media (max-width: 700px) {
+    body{
+        background-color: aliceblue;
+        font-family: "Tilt Warp", sans-serif;
+        font-size: small;
+    }
+    h1{
+        font-family: "climate crisis", sans-serif;
+    }
+    .box{
+        background-color: #2ecc71;
+        width: 310px;
+        height: 400px;
+        box-shadow: 10px 10px 5px rgb(0, 0, 0);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -200px 0 0 -160px;
+    }
+}
+</style>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 6, 2023 20:10:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "It's Here!!! 🎉(hopefully)";
+  }
+}, 1000);
+</script>
+<body>
+    <div class="box">
+        <center><h1>Coming Soon🎉....</h1></center>
+        <center><p>I am still working on my profile but I will be done in...</p></center>
+        <center><p class="countdown"id="demo"></p></center>
+        <center><h1>see ya then !</h1></center>
+        <center><p>I am working on the<span></span></p></center>
+    </div>
+</body>
+</html>
